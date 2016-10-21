@@ -2,4 +2,4 @@
 **/dist/
 **/npm-debug.log
 **/.DS_Store
-**/.js
+**/[^config].js

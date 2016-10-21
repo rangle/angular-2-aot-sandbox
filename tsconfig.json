@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "sourceMap": false,
+    "inlineSourceMap": true,
+    "noEmitHelpers": true,
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node", "core-js"]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
