@@ -21,14 +21,14 @@ const basePlugins = [
 ];
 
 const prodPlugins = [
-  new webpack.optimize.UglifyJsPlugin({
-    mangle: {
-      keep_fnames: true,
-    },
-    compress: {
-      warnings: false,
-    },
-  })
+  // new webpack.optimize.UglifyJsPlugin({
+  //   mangle: {
+  //     keep_fnames: true,
+  //   },
+  //   compress: {
+  //     warnings: false,
+  //   },
+  // })
 ];
 
 const plugins = basePlugins
