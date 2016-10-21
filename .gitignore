@@ -2,8 +2,8 @@
 **/dist/
 **/npm-debug.log
 **/.DS_Store
-**/[^config].js
-**/.ngfactory.js
-**/.ngfactory.ts
-**/.metadata.json
-control/AoT/*.js
+/control/*[^config].js
+**/*.ngfactory.js
+**/*.ngfactory.ts
+**/*.metadata.json
+sandbox

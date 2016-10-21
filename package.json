@@ -12,10 +12,8 @@
     "node": "6"
   },
   "scripts": {
-    "clean": "rimraf dist/",
-    "control": "npm run clean && node_modules/.bin/ngc && cross-env NODE_ENV=production webpack --config control/webpack-aot.config.js && http-server dist",
-    "control:jit": "npm run clean && cross-env NODE_ENV=production webpack --config control/webpack.config.js && http-server dist"
-
+    "clean": "rimraf dist/ && rimraf sandbox/",
+    "sandbox": "npm run clean && node_modules/.bin/ngc && cross-env NODE_ENV=production webpack --config webpack-aot.config.js"
   },
   "repository": {
     "type": "git",
@@ -51,6 +49,7 @@
     "webpack-dev-server": "2.1.0-beta.5"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.34"
+    "@types/core-js": "^0.9.34",
+    "ncp": "^2.0.0"
   }
 }

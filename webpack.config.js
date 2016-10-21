@@ -12,7 +12,7 @@ const basePlugins = [
   }),
   new webpack.optimize.CommonsChunkPlugin("vendor"),
   new HtmlWebpackPlugin({
-    template: "./control/index.html"
+    template: "./sandbox/index.html"
   }),
   new webpack.ContextReplacementPlugin(
     /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
@@ -36,7 +36,7 @@ const plugins = basePlugins
 
 module.exports = {
   entry: {
-    app: "./control/main.ts",
+    app: "./sandbox/main.ts",
     vendor: [
       "reflect-metadata",
       "zone.js",
