@@ -7,3 +7,4 @@
 **/*.ngfactory.ts
 **/*.metadata.json
 sandbox
+default-exports/*.js
