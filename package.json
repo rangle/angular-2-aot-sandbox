@@ -12,8 +12,10 @@
     "node": "6"
   },
   "scripts": {
-    "clean:control": "rimraf control/dist/",
-    "control": "npm run clean:control && cross-env NODE_ENV=production webpack --display-error-details --config control/webpack.config.js && http-server control/dist"
+    "clean": "rimraf dist/",
+    "control": "npm run clean && node_modules/.bin/ngc && cross-env NODE_ENV=production webpack --config control/webpack-aot.config.js && http-server dist",
+    "control:jit": "npm run clean && cross-env NODE_ENV=production webpack --config control/webpack.config.js && http-server dist"
+
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
   "dependencies": {
     "@angular/common": "^2.0.0",
     "@angular/compiler": "^2.0.0",
+    "@angular/compiler-cli": "^2.0.0",
     "@angular/core": "^2.0.0",
     "@angular/platform-browser": "^2.0.0",
     "@angular/platform-browser-dynamic": "^2.0.0",

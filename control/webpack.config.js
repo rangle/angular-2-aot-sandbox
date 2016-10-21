@@ -1,5 +1,10 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ENV = process.env.npm_lifecycle_event;
+const JiT = ENV === 'control:jit';
+if (JiT) {
+  console.log('AoT: False');
+}
 
 const basePlugins = [
   new webpack.DefinePlugin({
@@ -37,15 +42,12 @@ module.exports = {
       "zone.js",
       "@angular/core",
       "@angular/compiler",
-      "@angular/common",
-      "@angular/platform-browser",
       "@angular/platform-browser-dynamic",
-      "ts-helpers",
-      "rxjs"
+      "ts-helpers"
     ]
   },
   output: {
-    path: __dirname + "/dist",
+    path: __dirname + "/../dist",
     filename: "[name].[hash].js"
   },
   resolve: {
