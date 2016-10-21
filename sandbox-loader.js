@@ -1,5 +1,6 @@
 const fs = require("fs");
 const ncp = require("ncp");
+const spawn = require('child_process').spawn;
 const whichCase = process.argv[2] || "NULL";
 const aot = process.argv[3] || true;
 const avaliableCases = [
@@ -12,25 +13,32 @@ if (avaliableCases.indexOf(whichCase) === -1) {
   process.exit(1);
 }
 
-ncp(whichCase, "sandbox", function(error){
-  if (error) {
-    console.log(error);
-    process.exit(1);
-  }
-  console.log("AoT:", aot);
-  console.log("Test case", "["+whichCase+"]", "LOADED");
-  if (aot === true) {
-    console.log("Test case", "["+whichCase+"]", "BUILDING");
-    const spawn = require('child_process').spawn;
-    const sandbox = spawn('npm', ['run', 'sandbox']);
-    sandbox.stderr.on('data', (data) => {
-      console.log(`stderr: ${data}`);
-    });
-
-    sandbox.on('close', (code) => {
-      if (code === 0) {
-        console.log("Test case", "["+whichCase+"]", "PASS");
+const clean = spawn('npm', ['run', 'clean']);
+clean.on('close', function(code){
+  if (code === 0) {
+    ncp(whichCase, "sandbox", function(error){
+      if (error) {
+        console.log(error);
+        process.exit(1);
       }
-    });
+      fs.writeFileSync("./sandbox/tsconfig.json", fs.readFileSync("tsconfig.json"));
+      console.log("AoT:", aot);
+      console.log("Test case", "["+whichCase+"]", "LOADED");
+      if (aot === true) {
+        console.log("Test case", "["+whichCase+"]", "BUILDING");
+        const sandbox = spawn('npm', ['run', 'sandbox']);
+        sandbox.stderr.on('data', (data) => {
+          console.log(`stderr: ${data}`);
+        });
+
+        sandbox.on('close', (code) => {
+          if (code === 0) {
+            console.log("Test case", "["+whichCase+"]", "PASS");
+          } else {
+            console.log("Test case", "["+whichCase+"]", "FAILED");
+          }
+        });
+      }
+    })
   }
 })
