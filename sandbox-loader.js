@@ -10,6 +10,7 @@ const avaliableCases = [
   "form-control",
   "form-control-error",
   "func-in-providers",
+  "func-in-declarations",
 ];
 
 if (whichCase === "total") {
