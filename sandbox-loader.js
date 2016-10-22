@@ -9,6 +9,7 @@ const avaliableCases = [
   "default-exports",
   "form-control",
   "form-control-error",
+  "func-in-providers",
 ];
 
 if (whichCase === "total") {
