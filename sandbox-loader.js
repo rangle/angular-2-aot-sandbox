@@ -11,6 +11,7 @@ const avaliableCases = [
   "form-control-error",
   "func-in-providers",
   "func-in-declarations",
+  "func-in-routes",
 ];
 
 if (whichCase === "total") {

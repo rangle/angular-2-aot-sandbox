@@ -31,6 +31,7 @@
     "@angular/forms": "^2.0.0",
     "@angular/platform-browser": "^2.0.0",
     "@angular/platform-browser-dynamic": "^2.0.0",
+    "@angular/router": "^3.0.0",
     "@types/node": "^6.0.38",
     "awesome-typescript-loader": "^2.2.3",
     "babel-core": "^6.9.1",

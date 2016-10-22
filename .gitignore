@@ -12,3 +12,4 @@ form-control/*.js
 form-control-error/*.js
 func-in-providers/*.js
 func-in-declarations/*.js
+func-in-routes/*.js
