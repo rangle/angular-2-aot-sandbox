@@ -8,6 +8,7 @@ const avaliableCases = [
   "control",
   "default-exports",
   "form-control",
+  "form-control-error",
 ];
 
 if (whichCase === "total") {
@@ -21,7 +22,7 @@ if (whichCase === "total") {
 }
 
 if (avaliableCases.indexOf(whichCase) === -1) {
-  console.log("["+whichCase+"]", " case is not avaliable");
+  console.log("["+whichCase+"]", "case is not avaliable");
   process.exit(1);
 }
 

@@ -9,3 +9,4 @@
 sandbox
 default-exports/*.js
 form-control/*.js
+form-control-error/*.js
