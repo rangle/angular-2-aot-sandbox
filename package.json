@@ -13,7 +13,8 @@
   },
   "scripts": {
     "clean": "rimraf dist/ && rimraf sandbox/",
-    "sandbox": "node_modules/.bin/ngc -p sandbox && cross-env NODE_ENV=production webpack --config webpack-aot.config.js"
+    "sandbox": "node_modules/.bin/ngc -p sandbox && cross-env NODE_ENV=production webpack --config webpack-aot.config.js",
+    "sandbox:jit": "cross-env NODE_ENV=production webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",

@@ -37,20 +37,22 @@ clean.on('close', function(code){
       fs.writeFileSync("./sandbox/tsconfig.json", fs.readFileSync("tsconfig.json"));
       console.log("AoT:", aot);
       console.log("Test case", "["+whichCase+"]", "LOADED");
-      if (aot === true) {
-        console.log("Test case", "["+whichCase+"]", "BUILDING");
-        const sandbox = spawn('npm', ['run', 'sandbox']);
-        sandbox.stderr.on('data', (data) => {
-          console.log(`stderr: ${data}`);
-        });
-        sandbox.on('close', (code) => {
-          if (code === 0) {
-            console.log("Test case", "["+whichCase+"]", "PASS");
-          } else {
-            console.log("Test case", "["+whichCase+"]", "FAILED");
-          }
-        });
+      let commandOptions =  ['run', 'sandbox']
+      if (aot !== true) {
+        commandOptions = ['run', 'sandbox:jit']
       }
+      console.log("Test case", "["+whichCase+"]", "BUILDING");
+      const sandbox = spawn('npm', commandOptions);
+      sandbox.stderr.on('data', (data) => {
+        console.log(`stderr: ${data}`);
+      });
+      sandbox.on('close', (code) => {
+        if (code === 0) {
+          console.log("Test case", "["+whichCase+"]", "PASS");
+        } else {
+          console.log("Test case", "["+whichCase+"]", "FAILED");
+        }
+      });
     })
   }
 })
