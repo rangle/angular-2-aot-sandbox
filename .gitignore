@@ -8,3 +8,4 @@
 **/*.metadata.json
 sandbox
 default-exports/*.js
+form-control/*.js

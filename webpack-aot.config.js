@@ -11,6 +11,7 @@ webpackConfig.entry.vendor = [
   "zone.js",
   "@angular/core",
   "@angular/platform-browser",
+  "@angular/forms",
   "ts-helpers"
 ];
 module.exports = webpackConfig;

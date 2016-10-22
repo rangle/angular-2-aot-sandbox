@@ -42,12 +42,13 @@ module.exports = {
       "zone.js",
       "@angular/core",
       "@angular/compiler",
+      "@angular/forms",
       "@angular/platform-browser-dynamic",
       "ts-helpers"
     ]
   },
   output: {
-    path: __dirname + "/../dist",
+    path: __dirname + "/dist",
     filename: "[name].[hash].js"
   },
   resolve: {

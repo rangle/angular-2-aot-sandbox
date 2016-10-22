@@ -6,7 +6,8 @@ const whichCase = process.argv[2] || "NULL";
 const aot = process.argv[3] || true;
 const avaliableCases = [
   "control",
-  "default-exports"
+  "default-exports",
+  "form-control",
 ];
 
 if (whichCase === "total") {
@@ -38,9 +39,9 @@ clean.on('close', function(code){
       if (aot === true) {
         console.log("Test case", "["+whichCase+"]", "BUILDING");
         const sandbox = spawn('npm', ['run', 'sandbox']);
-        // sandbox.stderr.on('data', (data) => {
-        //   console.log(`stderr: ${data}`);
-        // });
+        sandbox.stderr.on('data', (data) => {
+          console.log(`stderr: ${data}`);
+        });
         sandbox.on('close', (code) => {
           if (code === 0) {
             console.log("Test case", "["+whichCase+"]", "PASS");
