@@ -15,6 +15,7 @@ const avaliableCases = [
   "private-input",
   "private-output",
   "private-viewchild",
+  "private-contentchild",
 ];
 
 if (whichCase === "total") {
