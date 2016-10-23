@@ -12,6 +12,7 @@ const avaliableCases = [
   "func-in-providers",
   "func-in-declarations",
   "func-in-routes",
+  "private-input",
 ];
 
 if (whichCase === "total") {
