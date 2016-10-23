@@ -14,3 +14,4 @@ func-in-providers/*.js
 func-in-declarations/*.js
 func-in-routes/*.js
 private-input/*.js
+private-output/*.js
