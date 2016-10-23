@@ -17,3 +17,4 @@ private-input/*.js
 private-output/*.js
 private-viewchild/*.js
 private-contentchild/*.js
+private-hostbinding/*.js
