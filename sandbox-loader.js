@@ -14,6 +14,7 @@ const avaliableCases = [
   "func-in-routes",
   "private-input",
   "private-output",
+  "private-viewchild",
 ];
 
 if (whichCase === "total") {
