@@ -21,3 +21,4 @@ private-hostbinding/*.js
 interpolated-es6/*.js
 template-variable/*.js
 template-expression/*.js
+mut-property-decorator/*.js

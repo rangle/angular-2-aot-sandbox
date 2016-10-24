@@ -20,6 +20,7 @@ const avaliableCases = [
   "interpolated-es6",
   "template-variable",
   "template-expression",
+  "mut-property-decorator",
 ];
 
 if (whichCase === "total") {
