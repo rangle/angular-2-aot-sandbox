@@ -19,6 +19,7 @@ const avaliableCases = [
   "private-hostbinding",
   "interpolated-es6",
   "template-variable",
+  "template-expression",
 ];
 
 if (whichCase === "total") {
