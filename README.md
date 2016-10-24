@@ -21,13 +21,15 @@ This repo should be:
 [PASS] `form-control` <br/>
 [PASS] `template-variable` <br/>
 [PASS] `template-expression` <br/>
-
+[PASS] `mut-property-decorator` <br/>
+[PASS] `nomut-property-decorator` <br/>
 [FAILED] `default-exports` <br/>
 [FAILED] `form-control-error` <br/>
 [FAILED] `func-in-declarations` <br/>
 [FAILED] `func-in-providers` <br/>
 [FAILED] `func-in-routes` <br/>
 [FAILED] `interpolated-es6` <br/>
+[FAILED] `ng2-redux-@select` <br/>
 [FAILED] `private-contentchild` <br/>
 [FAILED] `private-hostbinding` <br/>
 [FAILED] `private-input` <br/>
