@@ -18,3 +18,4 @@ private-output/*.js
 private-viewchild/*.js
 private-contentchild/*.js
 private-hostbinding/*.js
+interpolated-es6/*.js
