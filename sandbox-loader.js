@@ -20,6 +20,7 @@ const avaliableCases = [
   "interpolated-es6",
   "template-variable",
   "template-expression",
+  "nomut-property-decorator",
   "mut-property-decorator",
 ];
 
