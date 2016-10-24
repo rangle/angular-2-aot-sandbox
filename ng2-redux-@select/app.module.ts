@@ -1,20 +1,21 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
-import { NgReduxModule, NgRedux } from "ng2-redux";
+import { NgReduxModule, NgRedux, DevToolsExtension  } from "ng2-redux";
 import { CounterActions } from "./actions/counter.actions";
 
 
 @NgModule({
   imports: [
     BrowserModule,
-    NgReduxModule,
+    NgReduxModule.forRoot(),
   ],
   declarations: [
     AppComponent,
   ],
   providers: [
-    CounterActions
+    CounterActions,
+    DevToolsExtension
   ],
   bootstrap: [AppComponent]
 })
