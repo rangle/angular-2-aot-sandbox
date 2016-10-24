@@ -23,6 +23,7 @@ const avaliableCases = [
   "nomut-property-decorator",
   "mut-property-decorator",
   "service-with-generic-type-param",
+  "ng2-redux-@select",
 ];
 
 if (whichCase === "total") {

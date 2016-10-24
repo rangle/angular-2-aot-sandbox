@@ -24,3 +24,4 @@ template-expression/*.js
 mut-property-decorator/*.js
 nomut-property-decorator/*.js
 service-with-generic-type-param/*.js
+ng2-redux-@select/**/*.js
