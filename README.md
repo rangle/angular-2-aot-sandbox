@@ -15,3 +15,21 @@ This repo should be:
 - variable instead of string literal for `@Component`'s template field
 - expression instead of string literal for `@Component`'s template field
 - interpolated ES6(`${variable}`) in a `@Component`'s template field
+
+## Current Status
+[PASS] `control` <br/>
+[PASS] `form-control` <br/>
+[PASS] `template-variable` <br/>
+[PASS] `template-expression` <br/>
+
+[FAILED] `default-exports` <br/>
+[FAILED] `form-control-error` <br/>
+[FAILED] `func-in-declarations` <br/>
+[FAILED] `func-in-providers` <br/>
+[FAILED] `func-in-routes` <br/>
+[FAILED] `interpolated-es6` <br/>
+[FAILED] `private-contentchild` <br/>
+[FAILED] `private-hostbinding` <br/>
+[FAILED] `private-input` <br/>
+[FAILED] `private-output` <br/>
+[FAILED] `private-viewchild` <br/>
