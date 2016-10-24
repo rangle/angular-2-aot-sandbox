@@ -22,6 +22,7 @@ const avaliableCases = [
   "template-expression",
   "nomut-property-decorator",
   "mut-property-decorator",
+  "service-with-generic-type-param",
 ];
 
 if (whichCase === "total") {
