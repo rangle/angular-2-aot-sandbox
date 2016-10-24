@@ -33,3 +33,4 @@ This repo should be:
 [FAILED] `private-input` <br/>
 [FAILED] `private-output` <br/>
 [FAILED] `private-viewchild` <br/>
+[FAILED] `service-with-generic-type-param` <br/>

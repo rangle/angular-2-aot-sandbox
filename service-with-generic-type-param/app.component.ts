@@ -7,7 +7,7 @@ import { HelloService } from "./hello.service";
 })
 export class AppComponent {
   greeting: string;
-  constructor(helloService: HelloService) {
+  constructor(helloService: HelloService<boolean>) {
     this.greeting = helloService.getHello(true);
   }
 };
