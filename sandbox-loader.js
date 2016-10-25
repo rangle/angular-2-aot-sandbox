@@ -1,3 +1,5 @@
+'use strict';
+
 const fs = require("fs");
 const ncp = require("ncp");
 const spawn = require('child_process').spawn;
@@ -12,6 +14,7 @@ const avaliableCases = [
   "func-in-providers",
   "func-in-declarations",
   "func-in-routes",
+  "private-property",
   "private-input",
   "private-output",
   "private-viewchild",
