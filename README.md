@@ -31,5 +31,6 @@ npm run start
 [FAILED] `private-hostbinding` <br/>
 [FAILED] `private-input` <br/>
 [FAILED] `private-output` <br/>
+[FAILED] `private-property` <br/>
 [FAILED] `private-viewchild` <br/>
 [FAILED] `service-with-generic-type-param` <br/>
