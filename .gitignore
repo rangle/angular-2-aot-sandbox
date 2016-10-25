@@ -16,6 +16,7 @@ func-in-declarations/*.js
 func-in-routes/*.js
 private-input/*.js
 private-output/*.js
+private-property/*.js
 private-viewchild/*.js
 private-contentchild/*.js
 private-hostbinding/*.js
