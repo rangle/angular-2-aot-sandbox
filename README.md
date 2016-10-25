@@ -9,7 +9,10 @@ and to turn off AoT:
 ```
 node sanbox-loader.js control false
 ```
-
+The bundle files are inside `./dist/`, and to host:
+```
+npm run start
+```
 ## Current Status
 [PASS] `control` <br/>
 [PASS] `form-control` <br/>
