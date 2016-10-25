@@ -26,7 +26,7 @@ npm run start
 [FAILED] `func-in-providers` <br/>
 [FAILED] `func-in-routes` <br/>
 [FAILED] `interpolated-es6` <br/>
-[FAILED] `ng2-redux-@select` <br/>
+[FAILED] `ng2-redux-@select` [related discussion](https://github.com/angular-redux/ng2-redux/issues/236)<br/>
 [FAILED] `private-contentchild` <br/>
 [FAILED] `private-hostbinding` <br/>
 [FAILED] `private-input` <br/>
