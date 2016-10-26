@@ -19,6 +19,7 @@ npm run start
 | --- | --- |
 | control | ✅ |
 | form-control | ✅ |
+| func-in-string-config | ✅ |
 | template-variable | ✅ |
 | template-expression | ✅ |
 | mut-property-decorator | ✅ |  
