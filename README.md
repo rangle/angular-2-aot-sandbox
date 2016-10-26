@@ -14,23 +14,26 @@ The bundle files are inside `./dist/`, and to host:
 npm run start
 ```
 ## Current Status
-[PASS] `control` <br/>
-[PASS] `form-control` <br/>
-[PASS] `template-variable` <br/>
-[PASS] `template-expression` <br/>
-[PASS] `mut-property-decorator` <br/>
-[PASS] `nomut-property-decorator` <br/>
-[FAILED] `default-exports` <br/>
-[FAILED] `form-control-error` <br/>
-[FAILED] `func-in-declarations` <br/>
-[FAILED] `func-in-providers` <br/>
-[FAILED] `func-in-routes` <br/>
-[FAILED] `interpolated-es6` <br/>
-[FAILED] `ng2-redux-@select` [related discussion](https://github.com/angular-redux/ng2-redux/issues/236)<br/>
-[FAILED] `private-contentchild` <br/>
-[FAILED] `private-hostbinding` <br/>
-[FAILED] `private-input` <br/>
-[FAILED] `private-output` <br/>
-[FAILED] `private-property` <br/>
-[FAILED] `private-viewchild` <br/>
-[FAILED] `service-with-generic-type-param` <br/>
+
+| Test | Status |
+| --- | --- |
+| control | ✅ |
+| form-control | ✅ |
+| template-variable | ✅ |
+| template-expression | ✅ |
+| mut-property-decorator | ✅ |  
+| nomut-property-decorator | ✅ |
+| default-exports | ❌ |
+| form-control-error | ❌ |
+| func-in-declarations| ❌ |
+| func-in-providers | ❌ |
+| func-in-routes | ❌ |
+| interpolated-es6 | ❌ |
+| ng2-redux-@select ([related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) | ❌ |
+| private-contentchild | ❌ |
+| private-hostbinding | ❌ |
+| private-input | ❌ |
+| private-output | ❌ |  
+| private-property | ❌ |
+| private-viewchild | ❌ |
+| service-with-generic-type-param | ❌ |
