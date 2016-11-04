@@ -32,6 +32,7 @@ npm run start
 | interpolated-es6 | ❌ |
 | ng2-redux | ❌ |
 | ng2-redux-@select ([related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) | ❌ |
+| ngrx | ❌ |
 | private-contentchild | ❌ |
 | private-hostbinding | ❌ |
 | private-input | ❌ |
