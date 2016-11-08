@@ -24,6 +24,7 @@ npm run start
 | template-expression | ✅ |
 | mut-property-decorator | ✅ |
 | nomut-property-decorator | ✅ |
+| arrow-function-exports | ❌ |
 | default-exports | ❌ |
 | form-control-error | ❌ |
 | func-in-declarations| ❌ |
