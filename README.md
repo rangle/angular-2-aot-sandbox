@@ -22,7 +22,7 @@ npm run start
 | func-in-string-config | ✅ |
 | template-variable | ✅ |
 | template-expression | ✅ |
-| mut-property-decorator | ✅ |  
+| mut-property-decorator | ✅ |
 | nomut-property-decorator | ✅ |
 | default-exports | ❌ |
 | form-control-error | ❌ |
@@ -32,7 +32,7 @@ npm run start
 | interpolated-es6 | ❌ |
 | ng2-redux | ❌ |
 | ng2-redux-@select ([related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) | ❌ |
-| ngrx | ❌ |
+| ngrx | ✅ |
 | private-contentchild | ❌ |
 | private-hostbinding | ❌ |
 | private-input | ❌ |
@@ -51,6 +51,22 @@ Do:
 ```ts
 export class AppComponent {};
 ```
+
+### arrow-function-exports
+Don't:
+```ts
+export const couterReducer = (state, action: Action) => {
+  // ...
+}
+```
+
+Do:
+```ts
+export function counterReducer(state, action: Action) {
+  // ...
+}
+```
+
 ### form-control-error
 Don't:
 ```html
