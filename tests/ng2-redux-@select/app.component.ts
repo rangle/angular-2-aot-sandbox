@@ -8,15 +8,15 @@ import { IAppState, rootReducer, enhancers } from "./store";
   selector: "app",
   providers: [ CounterActions ],
   template: `
-  <p>
-    Clicked: {{ counter$ | async }} times
-    <button (click)="actions.increment()">+</button>
-    <button (click)="actions.decrement()">-</button>
-  </p>
+    <button (click)="actions.increment()">Increment</button>
+    <div>Current Count: {{ counter$ | async }}</div>
+    <button (click)="actions.decrement()">Decrement</button>
+
+    <button (click)="actions.reset()">Reset Counter</button>
   `
 })
 export class AppComponent {
-  @select("counter") counter$: Observable<number>;
+  @select() counter$: Observable<number>;
 
   constructor(
     private ngRedux: NgRedux<IAppState>,

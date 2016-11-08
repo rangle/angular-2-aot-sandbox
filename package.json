@@ -57,7 +57,7 @@
     "@ngrx/store": "^2.2.1",
     "@types/core-js": "^0.9.34",
     "ncp": "^2.0.0",
-    "ng2-redux": "^4.0.0-beta.6",
+    "ng2-redux": "^4.1.0",
     "redux": "^3.6.0"
   }
 }

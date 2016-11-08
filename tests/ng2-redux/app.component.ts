@@ -8,20 +8,26 @@ import { IAppState, rootReducer, enhancers } from "./store";
   selector: "app",
   providers: [ CounterActions ],
   template: `
-  <p>
-    Hello World
-  </p>
+    <button (click)="actions.increment()">Increment</button>
+    <div>Current Count: {{ counter$ | async }}</div>
+    <button (click)="actions.decrement()">Decrement</button>
+
+    <button (click)="actions.reset()">Reset Counter</button>
   `
 })
 export class AppComponent {
+  counter$: Observable<number>;
+
   constructor(
     private ngRedux: NgRedux<IAppState>,
     private devTool: DevToolsExtension,
     public actions: CounterActions) {
       this.ngRedux.configureStore(
-      rootReducer,
-      {},
-      [],
-      [ ...enhancers, devTool.isEnabled() ? devTool.enhancer() : f => f]);
+        rootReducer,
+        {},
+        [],
+        [ ...enhancers, devTool.isEnabled() ? devTool.enhancer() : f => f]);
+
+      this.counter$ = ngRedux.select('counter');
     }
 }
