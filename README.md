@@ -3,11 +3,11 @@ This repo is used to formalize what we can and cannot do with ngc.
 
 To run specific test case like `control`:
 ```
-node sanbox-loader.js control
+node sandbox-loader.js control
 ```
 and to turn off AoT:
 ```
-node sanbox-loader.js control false
+node sandbox-loader.js control false
 ```
 The bundle files are inside `./dist/`, and to host:
 ```
