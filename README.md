@@ -31,8 +31,8 @@ npm run start
 | func-in-routes | ❌ |
 | interpolated-es6 | ❌ |
 | ng2-redux | ✅ |
-| ng2-redux-@select | ✅ (but not with `@ngtools`/webpack or the Angular-CLI: [related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) |
-| ngrx | ✅ |
+| ng2-redux-@select | ✅ (but not with `@ngtools/webpack` or the Angular-CLI: [related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) |
+| ngrx | ✅ (but not ngrx/Effects with `@ngtools/webpack` or the Angular-CLI: same issue as above). |
 | private-contentchild | ❌ |
 | private-hostbinding | ❌ |
 | private-input | ❌ |
