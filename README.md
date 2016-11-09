@@ -34,6 +34,7 @@ npm run start
 | func-in-providers | ❌ |
 | func-in-routes | ❌ |
 | interpolated-es6 | ❌ |
+| nested-function | ❌ |
 | property-accessors | ❌ |
 | private-contentchild | ❌ |
 | private-hostbinding | ❌ |
