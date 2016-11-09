@@ -34,6 +34,7 @@ npm run start
 | func-in-providers | ❌ |
 | func-in-routes | ❌ |
 | interpolated-es6 | ❌ |
+| property-accessors | ❌ |
 | private-contentchild | ❌ |
 | private-hostbinding | ❌ |
 | private-input | ❌ |
@@ -268,7 +269,31 @@ export class AppComponent implements AfterViewInit {
   }
 };
 ```
+### property-accessors
+Don't:
+```ts
+import { ERROR, WARNING } from "./definitions";
 
+export const ErrorEventHandlers = {
+  [ERROR]: {
+    handler: function() {}
+  },
+  [WARNING]: {
+    handler: function() {}
+  }
+};
+```
+Do:
+```ts
+export const ErrorEventHandlers = {
+  'ERROR': {
+    handler: function() {}
+  },
+  'WARNING': {
+    handler: function() {}
+  }
+};
+```
 ### service-with-generic-type-param
 Don't:
 ```ts
