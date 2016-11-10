@@ -35,6 +35,7 @@ npm run start
 | func-in-routes | ❌ |
 | interpolated-es6 | ❌ |
 | nested-function | ❌ |
+| ngrx-store-logger | ❌ (we suspect the reason is the `compose` function from `@ngrx/core/compose` which is an example of `nested-function`) |
 | property-accessors | ❌ |
 | private-contentchild | ❌ |
 | private-hostbinding | ❌ |

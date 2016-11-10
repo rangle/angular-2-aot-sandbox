@@ -58,6 +58,7 @@
     "@types/core-js": "^0.9.34",
     "ncp": "^2.0.0",
     "ng2-redux": "^4.1.0",
+    "ngrx-store-logger": "^0.1.7",
     "redux": "^3.6.0"
   }
 }
