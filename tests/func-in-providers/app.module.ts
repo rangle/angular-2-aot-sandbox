@@ -1,8 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { AppComponent } from "./app.component";
-import { AppService } from "./app.service";
-
+import { serviceProviders } from "./services/service-providers";
 @NgModule({
   imports: [
     BrowserModule,
@@ -10,9 +9,7 @@ import { AppService } from "./app.service";
   declarations: [
     AppComponent,
   ],
-  providers: [
-    { provide: AppService, useFactory: () => { return { name: "world test" }; }},
-  ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: serviceProviders
 })
 export class AppModule {};
