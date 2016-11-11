@@ -31,7 +31,7 @@ npm run start
 | default-exports | ❌ |
 | form-control-error | ❌ |
 | func-in-declarations| ❌ |
-| func-in-providers | ❌ |
+| func-in-providers-useFactory | ❌ |
 | func-in-routes | ❌ |
 | interpolated-es6 | ❌ |
 | nested-function | ❌ |
@@ -96,7 +96,7 @@ Do:
 
 Apply `@angular/router` or other Angular logic to re-implement the same thing.
 
-### func-in-providers
+### func-in-providers-useFactory
 Don't:
 ```ts
 @NgModule({
