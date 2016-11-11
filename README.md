@@ -5,9 +5,13 @@ To run specific test case like `control`:
 ```
 node sandbox-loader.js control
 ```
-and to turn off AoT:
+The default is to use `ngc` for AoT, but you can also use `@ngtools/webpack`:
 ```
-node sandbox-loader.js control false
+node sandbox-loader.js control ngtools
+```
+or JiT:
+```
+node sandbox-loader.js control jit
 ```
 The bundle files are inside `./dist/`, and to host:
 ```
@@ -16,7 +20,7 @@ npm run start
 ## Current Status
 
 | Test | AoT With `ngc` | AoT With `@ngtools/webpack` | JiT |
-| ---- | -------------- | --------------------------- | --- |   
+| ---- | :--------------: | :---------------------------: | :---: |   
 | control | ✅ | ✅ | ✅ |
 | form-control | ✅ | ✅ | ✅ |
 | func-in-string-config | ✅ | ✅ | ✅ |
