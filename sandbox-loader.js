@@ -5,7 +5,7 @@ const ncp = require('ncp');
 const spawn = require('child_process').spawn;
 const spawnSync = require('child_process').spawnSync;
 const whichCase = process.argv[2] || 'NULL';
-const aot = process.argv[3] || true;
+const option = process.argv[3] || 'ngc';
 const path = require('path');
 const availableCases = getAvailableCases(path.resolve(__dirname, 'tests'));
 
@@ -33,10 +33,13 @@ clean.on('close', function (code) {
         process.exit(1);
       }
       fs.writeFileSync('./sandbox/tsconfig.json', fs.readFileSync('tsconfig.json'));
-      console.log('AoT:', aot);
+      console.log('AoT:', option === 'jit' ? false: true);
+      console.log('ngc:', (option !== 'ngc' || option === 'jit') ? false: true);
       console.log('Test case', '[' + whichCase + ']', 'LOADED');
-      let commandOptions = ['run', 'sandbox'];
-      if (aot !== true) {
+      let commandOptions = ['run', 'sandbox:ngc'];
+      if (option !== 'ngc' && option === 'ngtools') {
+        commandOptions = ['run', 'sandbox:ngtools']
+      } else if (option === 'jit') {
         commandOptions = ['run', 'sandbox:jit']
       }
       console.log('Test case', '[' + whichCase + ']', 'BUILDING');

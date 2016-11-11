@@ -5,6 +5,7 @@ const JiT = ENV === 'control:jit';
 webpackConfig.entry.app = './sandbox/main-aot.ts';
 if (!JiT) {
   console.log('AoT: True');
+  console.log('ngc: True');
 }
 webpackConfig.entry.vendor = [
   "reflect-metadata",
