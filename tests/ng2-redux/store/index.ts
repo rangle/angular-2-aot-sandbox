@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
+import { combineReducers, Action } from "redux";
 import { counterReducer } from "./counter.reducer";
 
 export class IAppState {

@@ -33,14 +33,18 @@ clean.on('close', function (code) {
         process.exit(1);
       }
       fs.writeFileSync('./sandbox/tsconfig.json', fs.readFileSync('tsconfig.json'));
-      console.log('AoT:', option === 'jit' ? false: true);
-      console.log('ngc:', (option !== 'ngc' || option === 'jit') ? false: true);
       console.log('Test case', '[' + whichCase + ']', 'LOADED');
       let commandOptions = ['run', 'sandbox:ngc'];
       if (option !== 'ngc' && option === 'ngtools') {
+        console.log('AoT:', 'True');
+        console.log('With: @ngtools/webpack');
         commandOptions = ['run', 'sandbox:ngtools']
       } else if (option === 'jit') {
+        console.log('AoT:', 'False');
         commandOptions = ['run', 'sandbox:jit']
+      } else {
+        console.log('AoT:', 'True');
+        console.log('With: ngc');
       }
       console.log('Test case', '[' + whichCase + ']', 'BUILDING');
       const sandbox = spawn('npm', commandOptions);
