@@ -10,3 +10,4 @@ sandbox
 yarn.lock
 tests/**/*.js
 ng2-redux-@select/**/*.js
+*.swp

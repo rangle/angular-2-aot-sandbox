@@ -15,21 +15,21 @@ npm run start
 ```
 ## Current Status
 
-| Test | Status |
-| --- | --- |
-| control | ✅ |
-| form-control | ✅ |
-| func-in-string-config | ✅ |
-| template-variable | ✅ |
-| template-expression | ✅ |
-| mut-property-decorator | ✅ |
-| nomut-property-decorator | ✅ |
-| ng2-redux | ✅ |
-| ng2-redux-@select | ✅ (but not with `@ngtools/webpack` or the Angular-CLI: [related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) |
-| ngrx | ✅ (but not `ngrx/Effects` with `@ngtools/webpack` or the Angular-CLI: same issue as above). |
-| ngrx-compose | ✅ (Requires some work, please look into the `tests/ngrx-compose/reducers/index.ts`) |
+| Test | Status | Issue |
+| --- | --- | --- |
+| control | ✅ | N/A |
+| form-control | ✅ | N/A |
+| func-in-string-config | ✅ | N/A |
+| template-variable | ✅ | N/A |
+| template-expression | ✅ | N/A |
+| mut-property-decorator | ✅ | N/A |
+| nomut-property-decorator | ✅ | N/A |
+| ng2-redux | ✅ | N/A |
+| ng2-redux-@select | ✅ (but not with `@ngtools/webpack` or the Angular-CLI: [related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) | N/A |
+| ngrx | ✅ (but not `ngrx/Effects` with `@ngtools/webpack` or the Angular-CLI: same issue as above). | N/A |
+| ngrx-compose | ✅ (Requires some work, please look into the `tests/ngrx-compose/reducers/index.ts`) | N/A |
 | arrow-function-exports | ❌ |
-| default-exports | ❌ |
+| default-exports | ❌ | [issue](https://github.com/angular/angular/issues/11402) |
 | form-control-error | ❌ |
 | func-in-declarations| ❌ |
 | func-in-providers | ❌ |
