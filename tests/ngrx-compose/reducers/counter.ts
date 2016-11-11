@@ -1,5 +1,9 @@
 import { ActionReducer, Action } from "@ngrx/store";
 
+export interface AppState {
+  counter: number;
+}
+
 export const INCREMENT = "INCREMENT";
 export const DECREMENT = "DECREMENT";
 export const RESET = "RESET";

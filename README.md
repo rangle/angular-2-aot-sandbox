@@ -27,6 +27,7 @@ npm run start
 | ng2-redux | ✅ |
 | ng2-redux-@select | ✅ (but not with `@ngtools/webpack` or the Angular-CLI: [related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) |
 | ngrx | ✅ (but not `ngrx/Effects` with `@ngtools/webpack` or the Angular-CLI: same issue as above). |
+| ngrx-compose | ✅ (Requires some work, please look into the `tests/ngrx-compose/reducers/index.ts`) |
 | arrow-function-exports | ❌ |
 | default-exports | ❌ |
 | form-control-error | ❌ |
@@ -36,7 +37,6 @@ npm run start
 | func-in-routes | ❌ |
 | interpolated-es6 | ❌ |
 | nested-function | ❌ |
-| ngrx-store-logger | ❌ (we suspect the reason is the `compose` function from `@ngrx/core/compose` which is an example of `nested-function`) |
 | property-accessors | ❌ |
 | private-contentchild | ❌ |
 | private-hostbinding | ❌ |

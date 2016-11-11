@@ -5,14 +5,12 @@ import { AppComponent } from "./app.component";
 import { StoreModule, combineReducers } from "@ngrx/store";
 import { compose } from "@ngrx/core/compose";
 import { storeLogger } from "ngrx-store-logger";
-import { counterReducer } from "./counter";
+import { reducer } from "./reducers";
 
 @NgModule({
   imports: [
     BrowserModule,
-    StoreModule.provideStore(compose(
-      storeLogger(), combineReducers
-    )({counter: counterReducer}))
+    StoreModule.provideStore(reducer)
   ],
   declarations: [
     AppComponent,
