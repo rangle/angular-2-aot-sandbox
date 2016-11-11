@@ -4,7 +4,6 @@ import { AppComponent } from "./app.component";
 import { AppService } from "./app.service";
 import { barConst } from "./bar";
 
-
 @NgModule({
   imports: [
     BrowserModule,
