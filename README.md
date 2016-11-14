@@ -33,10 +33,10 @@ npm run start
 | ng2-redux-@select | ✅ | ❌ (nor with the Angular-CLI: [related discussion](https://github.com/angular-redux/ng2-redux/issues/236)) | ✅ |
 | ngrx | ✅ | ✅ (but not `ngrx/Effects` with `@ngtools/webpack` or the Angular-CLI: same issue as above).| ✅ |
 | ngrx-compose | ✅ (requires some work, please look into the `tests/ngrx-compose/reducers/index.ts`) | ✅ (same as with `ngc`) | ✅ |
-| arrow-function-exports | ❌ | ❌ | ✅ |
+| arrow-function-exports | ❌ (only fails when pass to an NgModule) | ❌ (same as with ngc) | ✅ |
 | default-exports | ❌ | ❌ | ✅ |
 | form-control-error | ❌ | ❌ | ✅ |
-| func-as-variable-export | ❌ | ❌ | ✅ |
+| func-as-variable-export | ❌ (only fails when pass to an NgModule) | ❌ (same as with ngc) | ✅ |
 | func-declaration-export | ✅ | ✅ | ✅ |
 | func-in-declarations | ❌ | ❌ | ✅ |
 | func-in-providers | ❌ | ❌ | ✅ |
