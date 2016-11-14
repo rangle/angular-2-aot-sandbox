@@ -187,6 +187,7 @@ Do:
 ```ts
 export class TabComponent {
   //...
+  /** @internal */
   @ContentChildren(PaneDirective) panes: QueryList<PaneDirective>;
   //...
 }
@@ -202,6 +203,7 @@ export class NameDirective {
 Do:
 ```ts
 export class NameDirective {
+  /** @internal */
   @HostBinding("class.world") isWorld: boolean = false;
 }
 ```
@@ -216,6 +218,7 @@ export class NameComponent {
 Do:
 ```ts
 export class NameComponent {
+  /** @internal */
  @Input() name: String;
 };
 ```
@@ -231,6 +234,7 @@ export class NameComponent {
 Do:
 ```ts
 export class NameComponent {
+  /** @internal */
  @Output() onClicked = new EventEmitter<boolean>();
  //...
 };
@@ -249,6 +253,7 @@ export class AppComponent {
 Do:
 ```ts
 export class AppComponent {
+  /** @internal */
   name: string;
   constructor() {
     this.name = 'World';
@@ -270,6 +275,7 @@ export class AppComponent implements AfterViewInit {
 Do:
 ```ts
 export class AppComponent implements AfterViewInit {
+  /** @internal */
   @ViewChild(ChildDirective) child: ChildDirective;
 
   ngAfterViewInit() {
