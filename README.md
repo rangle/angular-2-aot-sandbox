@@ -36,6 +36,8 @@ npm run start
 | arrow-function-exports | ❌ | ❌ | ✅ |
 | default-exports | ❌ | ❌ | ✅ |
 | form-control-error | ❌ | ❌ | ✅ |
+| func-as-variable-export | ❌ | ❌ | ✅ |
+| func-declaration-export | ✅ | ✅ | ✅ |
 | func-in-declarations | ❌ | ❌ | ✅ |
 | func-in-providers | ❌ | ❌ | ✅ |
 | func-in-providers-useFactory | ❌ | ❌ | ✅ |

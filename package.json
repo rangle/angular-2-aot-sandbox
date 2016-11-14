@@ -58,6 +58,7 @@
     "@ngrx/store": "^2.2.1",
     "@ngtools/webpack": "^1.1.5",
     "@types/core-js": "^0.9.34",
+    "@types/jquery": "^2.0.34",
     "jquery": "^3.1.1",
     "ncp": "^2.0.0",
     "ng2-redux": "^4.1.0",
