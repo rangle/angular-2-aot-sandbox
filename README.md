@@ -19,43 +19,48 @@ npm run start
 ```
 ## Current Status
 
-|              Test               |  AoT With `ngc`  |  AoT With `@ngtools/webpack`  |  JiT  |
-| ------------------------------- | :--------------: | :---------------------------: | :---: |   
-| control                         |        ✅        |               ✅              |   ✅   |
-| form-control                    |        ✅        |               ✅              |   ✅   |
-| func-in-string-config           |        ✅        |               ✅              |   ✅   |
-| jquery                          |        ✅        |               ✅              |   ✅   |
-| template-variable               |        ✅        |               ✅              |   ✅   |
-| template-expression             |        ✅        |               ✅              |   ✅   |
-| mut-property-decorator          |        ✅        |               ❌              |   ✅   |
-| nomut-property-decorator        |        ✅        |               ❌              |   ✅   |
-| ng2-redux                       |        ✅        |               ✅              |   ✅   |
-| ng2-redux-@select               |        ✅        |               ❌              |   ✅   |
-| ngrx                            |        ✅        |               ✅              |   ✅   |
-| ngrx-compose                    |        ✅        |               ✅              |   ✅   |
-| arrow-function-exports          |        ❌        |               ❌              |   ✅   |
-| default-exports                 |        ❌        |               ❌              |   ✅   |
-| form-control-error              |        ❌        |               ❌              |   ✅   |
-| func-as-variable-export         |        ❌        |               ❌              |   ✅   |
-| func-declaration-export         |        ✅        |               ✅              |   ✅   |
-| func-in-declarations            |        ❌        |               ❌              |   ✅   |
-| func-in-providers               |        ❌        |               ❌              |   ✅   |
-| func-in-providers-useFactory    |        ❌        |               ❌              |   ✅   |
-| func-in-providers-useValue      |        ❌        |               ❌              |   ✅   |
-| func-in-routes                  |        ❌        |               ❌              |   ✅   |
-| interpolated-es6                |        ❌        |               ❌              |   ✅   |
-| property-accessors              |        ❌        |               ❌              |   ✅   |
-| private-contentchild            |        ❌        |               ❌              |   ✅   |
-| private-hostbinding             |        ❌        |               ❌              |   ✅   |
-| private-input                   |        ❌        |               ❌              |   ✅   |
-| private-output                  |        ❌        |               ❌              |   ✅   |
-| private-property                |        ❌        |               ❌              |   ✅   |
-| private-viewchild               |        ❌        |               ❌              |   ✅   |
-| service-with-generic-type-param |        ❌        |               ❌              |   ✅   |
+|                                  Test                                  |  AoT With `ngc`  |  AoT With `@ngtools/webpack`  |  JiT  |
+| ---------------------------------------------------------------------- | :--------------: | :---------------------------: | :---: |   
+| [control](#control-top)                                                    |        ✅        |               ✅              |   ✅   |
+| [form-control](#form-control-top)                                      |        ✅        |               ✅              |   ✅   |
+| [func-in-string-config](#func-in-string-config-top)                    |        ✅        |               ✅              |   ✅   |
+| [jquery](#jquery-top)                                                  |        ✅        |               ✅              |   ✅   |
+| [template-variable](#template-variable-top)                            |        ✅        |               ✅              |   ✅   |
+| [template-expression](#template-expression-top)                        |        ✅        |               ✅              |   ✅   |
+| [mut-property-decorator](#mut-property-decorator-top)                  |        ✅        |               ❌              |   ✅   |
+| [nomut-property-decorator](#nomut-property-decorator-top)              |        ✅        |               ❌              |   ✅   |
+| [ng2-redux](#ng2-redux-top)                                            |        ✅        |               ✅              |   ✅   |
+| [ng2-redux-@select](#ng2-redux-@select-top)                            |        ✅        |               ❌              |   ✅   |
+| [ngrx](#ngrx-top)                                                      |        ✅        |               ✅              |   ✅   |
+| [ngrx-compose](#ngrx-compose-top)                                      |        ✅        |               ✅              |   ✅   |
+| [arrow-function-exports](#arrow-function-exports-top)                  |        ❌        |               ❌              |   ✅   |
+| [default-exports](#default-exports-top)                                |        ❌        |               ❌              |   ✅   |
+| [form-control-error](#form-control-error-top)                          |        ❌        |               ❌              |   ✅   |
+| [func-as-variable-export](#func-as-variable-export-top)                |        ❌        |               ❌              |   ✅   |
+| [func-declaration-export](#func-declaration-export-top)                |        ✅        |               ✅              |   ✅   |
+| [func-in-declarations](#func-in-declarations-top)                      |        ❌        |               ❌              |   ✅   |
+| [func-in-providers](#func-in-providers-top)                            |        ❌        |               ❌              |   ✅   |
+| [func-in-providers-useFactory](#func-in-providers-useFactory-top)      |        ❌        |               ❌              |   ✅   |
+| [func-in-providers-useValue](#func-in-providers-useValue-top)          |        ❌        |               ❌              |   ✅   |
+| [func-in-routes](#func-in-routes-top)                                  |        ❌        |               ❌              |   ✅   |
+| [interpolated-es6](#interpolated-es6-top)                              |        ❌        |               ❌              |   ✅   |
+| [property-accessors](#property-accessors-top)                          |        ❌        |               ❌              |   ✅   |
+| [private-contentchild](#private-contentchild-top)                      |        ❌        |               ❌              |   ✅   |
+| [private-hostbinding](#private-hostbinding-top)                        |        ❌        |               ❌              |   ✅   |
+| [private-input](#private-input-top)                                    |        ❌        |               ❌              |   ✅   |
+| [private-output](#private-output-top)                                  |        ❌        |               ❌              |   ✅   |
+| [private-property](#private-property-top)                              |        ❌        |               ❌              |   ✅   |
+| [private-viewchild](#private-viewchild-top)                            |        ❌        |               ❌              |   ✅   |
+| [service-with-generic-type-param](#service-with-generic-type-param-top)|        ❌        |               ❌              |   ✅   |
 
 ## AoT Do's and Don'ts
 This section explains the cases listed above, and will show how each of them fails and works.
-### default-exports
+
+### control [:top:](#current-status)
+
+This is used as a simplest working case.
+
+### default-exports [:top:](#current-status)
 Default exports are not supported with AoT.
 
 Don't:
@@ -67,7 +72,7 @@ Do:
 export class AppComponent {};
 ```
 
-### arrow-function-exports
+### arrow-function-exports [:top:](#current-status)
 Don't:
 ```ts
 export const couterReducer = (state, action: Action) => {
@@ -82,11 +87,11 @@ export function counterReducer(state, action: Action) {
 }
 ```
 
-### form-control
+### form-control [:top:](#current-status)
 
 Use `this.helloForm.controls["greetingMessage"]` to retrieve form control is fine.
 
-### form-control-error
+### form-control-error [:top:](#current-status)
 
 The syntax `errors?` is not supported by AoT.
 
@@ -99,7 +104,7 @@ Do:
 {{helloForm.controls["greetingMessage"].hasError("minlength")}}
 ```
 
-### func-as-variable-export
+### func-as-variable-export [:top:](#current-status)
 
 Export function as variable is fine with AoT except when it is passed to an NgModule.
 
@@ -138,11 +143,11 @@ export function foo(state: number) {
 export class AppModule {};
 ```
 
-### func-declaration-export
+### func-declaration-export [:top:](#current-status)
 
 This is a fixed version of `func-as-variable-export`.
 
-### func-in-declarations
+### func-in-declarations [:top:](#current-status)
 Don't:
 ```ts
 function someLoader() {...}
@@ -157,7 +162,7 @@ Do:
 
 Apply `@angular/router` or other Angular logic to re-implement the same thing.
 
-### func-in-providers
+### func-in-providers [:top:](#current-status)
 Pass a result of function to providers is not supported by AoT.
 
 Don't:
@@ -203,7 +208,7 @@ import { serviceProviders } from "./services/service-providers";
 export class AppModule {};
 ```
 
-### func-in-providers-useFactory
+### func-in-providers-useFactory [:top:](#current-status)
 Don't:
 ```ts
 @NgModule({
@@ -230,7 +235,7 @@ export class AppModule {};
 
 ```
 
-### func-in-providers-useValue
+### func-in-providers-useValue [:top:](#current-status)
 
 This case only fails when the passed value is generated by a nested function. If the foo inside `foo.ts` is not returning another function, then it will pass. Another solution is to replace useValue with useFactory and set it to use bar instead of barConst.
 
@@ -289,7 +294,7 @@ import { fooFactory } from "./foo";
 })
 export class AppModule {};
 ```
-### func-in-routes
+### func-in-routes [:top:](#current-status)
 Don't:
 ```ts
 function random() {
@@ -313,10 +318,10 @@ import { random } from "./random.routes.ts";
 const SAMPLE_APP_ROUTES: Routes = random();
 ```
 
-### func-in-string-config
+### func-in-string-config [:top:](#current-status)
 Function in string configuration is supported by AoT.
 
-### interpolated-es6
+### interpolated-es6 [:top:](#current-status)
 Don't:
 ```ts
 @Component({
@@ -336,7 +341,7 @@ export class AppComponent {
 };
 ```
 
-### jquery
+### jquery [:top:](#current-status)
 To use jQuery with AoT, one way is to use the `webpack.ProvidePlugin` to provide jquery as global variable; another way is to inject jquery as a service like this:
 ```ts
 //...
@@ -355,25 +360,25 @@ export class AppModule {};
 ```
 Notice that `useValue` here does not work.
 
-### mut-property-decorator
+### mut-property-decorator [:top:](#current-status)
 
 Mutating property decorator is supported by `ngc`, but does not work with `@ngtools/webpack`, because `@ngtools/webpack` explicitly remove all custom decorators. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
 
 Desired effect of this case is that `Hello World 42` instead of `Hello 42` should be displayed.
-### ng2-redux
+### ng2-redux [:top:](#current-status)
 
 Setting up basic `ng2-redux` is fine with AoT.
 
-### ng2-redux-@select
+### ng2-redux-@select [:top:](#current-status)
 The `@select` decorator works with raw `ngc` compiler but not with `@ngtools/webpack` because `@ngtools/webpack` explicitly remove all custom decorators. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
 
 In this test case, `@select() counter$: Observable<number>;` is used to get the counter observable so that we can access its value in the `AppComponent`.
 
-### ngrx
+### ngrx [:top:](#current-status)
 
 Setting up basic `ng2-redux` is fine with AoT. But similar to `ng2-redux-@select`, `ngrx/Effects` does not work with `@ngtools/webpack`. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
 
-### ngrx-compose
+### ngrx-compose [:top:](#current-status)
 
 Direct use of compose does not work with AoT, it requires a wrapper.
 
@@ -421,12 +426,12 @@ import { reducer } from "./reducers";
 export class AppModule {}
 ```
 
-### nomut-property-decorator
+### nomut-property-decorator [:top:](#current-status)
 
 No-mutating property decorator is supported by `ngc`, but does not work with `@ngtools/webpack`, because `@ngtools/webpack` explicitly remove all custom decorators. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
 
 Desired effect of this case is that console should raise errors because we are trying to change a `@ReadOnly` property.
-### private-contentchild
+### private-contentchild [:top:](#current-status)
 Don't:
 ```ts
 export class TabComponent {
@@ -445,7 +450,7 @@ export class TabComponent {
 }
 ```
 
-### private-hostbinding
+### private-hostbinding [:top:](#current-status)
 Don't:
 ```ts
 export class NameDirective {
@@ -460,7 +465,7 @@ export class NameDirective {
 }
 ```
 
-### private-input
+### private-input [:top:](#current-status)
 Don't:
 ```ts
 export class NameComponent {
@@ -475,7 +480,7 @@ export class NameComponent {
 };
 ```
 
-### private-output
+### private-output [:top:](#current-status)
 Don't:
 ```ts
 export class NameComponent {
@@ -492,7 +497,7 @@ export class NameComponent {
 };
 ```
 
-### private-property
+### private-property [:top:](#current-status)
 Don't:
 ```ts
 export class AppComponent {
@@ -513,7 +518,7 @@ export class AppComponent {
 }
 ```
 
-### private-viewchild
+### private-viewchild [:top:](#current-status)
 Don't:
 ```ts
 export class AppComponent implements AfterViewInit {
@@ -535,7 +540,7 @@ export class AppComponent implements AfterViewInit {
   }
 };
 ```
-### property-accessors
+### property-accessors [:top:](#current-status)
 
 The es6 property accessors are not supported by AoT if it is passed to an NgModule.
 
@@ -567,7 +572,7 @@ export const ErrorEventHandlers = {
   }
 };
 ```
-### service-with-generic-type-param
+### service-with-generic-type-param [:top:](#current-status)
 Don't:
 ```ts
 export class AppComponent {
