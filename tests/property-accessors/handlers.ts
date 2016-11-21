@@ -1,10 +1,13 @@
 import { ERROR, WARNING } from "./definitions";
 
+export function handler1() {};
+export function handler2() {};
+
 export const ErrorEventHandlers = {
   [ERROR]: {
-    handler: function() {}
+    handler: handler1
   },
   [WARNING]: {
-    handler: function() {}
+    handler: handler2
   }
 };
