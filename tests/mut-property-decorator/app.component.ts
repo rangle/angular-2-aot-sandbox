@@ -10,8 +10,8 @@ function Override(label: string) {
   };
 }
 
-class World {
-  @Override("World")
+export class World {
+  @Override("World 42")
   name: string = "42";
 }
 
