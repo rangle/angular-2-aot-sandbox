@@ -18,6 +18,7 @@ const world = new World();
 export class AppComponent {
   greeting: World = world;
   constructor() {
+    this.greeting.name = "world";
     console.log(this.greeting);
   }
 };
