@@ -21,7 +21,7 @@ npm run start
 
 |                                  Test                                  |  AoT With `ngc`  |  AoT With `@ngtools/webpack`  |  JiT  |
 | ---------------------------------------------------------------------- | :--------------: | :---------------------------: | :---: |   
-| [control](#control-top)                                                    |        ✅        |               ✅              |   ✅   |
+| [control](#control-top)                                                |        ✅        |               ✅              |   ✅   |
 | [form-control](#form-control-top)                                      |        ✅        |               ✅              |   ✅   |
 | [func-in-string-config](#func-in-string-config-top)                    |        ✅        |               ✅              |   ✅   |
 | [jquery](#jquery-top)                                                  |        ✅        |               ✅              |   ✅   |
@@ -56,6 +56,24 @@ npm run start
 ## AoT Do's and Don'ts
 This section explains the cases listed above, and will show how each of them fails and works.
 
+### arrow-function-exports [:top:](#current-status)
+
+Arrow function does not work with AoT when it is passed to an `NgModule`.
+
+Don't:
+```ts
+export const couterReducer = (state, action: Action) => {
+  // ...
+}
+```
+
+Do:
+```ts
+export function counterReducer(state, action: Action) {
+  // ...
+}
+```
+
 ### control [:top:](#current-status)
 
 This is used as a simplest working case.
@@ -70,21 +88,6 @@ export default class AppComponent {};
 Do:
 ```ts
 export class AppComponent {};
-```
-
-### arrow-function-exports [:top:](#current-status)
-Don't:
-```ts
-export const couterReducer = (state, action: Action) => {
-  // ...
-}
-```
-
-Do:
-```ts
-export function counterReducer(state, action: Action) {
-  // ...
-}
 ```
 
 ### form-control [:top:](#current-status)
@@ -158,7 +161,6 @@ function someLoader() {...}
 })
 export class AppModule {};
 ```
-Do:
 
 Apply `@angular/router` or other Angular logic to re-implement the same thing.
 
@@ -209,6 +211,9 @@ export class AppModule {};
 ```
 
 ### func-in-providers-useFactory [:top:](#current-status)
+
+Instead of using function directly, export it first in another module and import it back.
+
 Don't:
 ```ts
 @NgModule({
@@ -295,6 +300,9 @@ import { fooFactory } from "./foo";
 export class AppModule {};
 ```
 ### func-in-routes [:top:](#current-status)
+
+Direct use of function in route is not supported by AoT. Either avoid using it or export it from other module.
+
 Don't:
 ```ts
 function random() {
@@ -319,9 +327,11 @@ const SAMPLE_APP_ROUTES: Routes = random();
 ```
 
 ### func-in-string-config [:top:](#current-status)
+
 Function in string configuration is supported by AoT.
 
 ### interpolated-es6 [:top:](#current-status)
+
 Don't:
 ```ts
 @Component({
@@ -342,6 +352,7 @@ export class AppComponent {
 ```
 
 ### jquery [:top:](#current-status)
+
 To use jQuery with AoT, one way is to use the `webpack.ProvidePlugin` to provide jquery as global variable; another way is to inject jquery as a service like this:
 ```ts
 //...
@@ -369,7 +380,7 @@ Desired effect of this case is that `Hello World 42` instead of `Hello 42` shoul
 
 Setting up basic `ng2-redux` is fine with AoT.
 
-### ng2-redux-@select [:top:](#current-status)
+### ng2-redux- [:top:](#current-status)@select
 The `@select` decorator works with raw `ngc` compiler but not with `@ngtools/webpack` because `@ngtools/webpack` explicitly remove all custom decorators. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
 
 In this test case, `@select() counter$: Observable<number>;` is used to get the counter observable so that we can access its value in the `AppComponent`.
@@ -432,6 +443,7 @@ No-mutating property decorator is supported by `ngc`, but does not work with `@n
 
 Desired effect of this case is that console should raise errors because we are trying to change a `@ReadOnly` property.
 ### private-contentchild [:top:](#current-status)
+
 Don't:
 ```ts
 export class TabComponent {
@@ -451,6 +463,7 @@ export class TabComponent {
 ```
 
 ### private-hostbinding [:top:](#current-status)
+
 Don't:
 ```ts
 export class NameDirective {
@@ -466,6 +479,7 @@ export class NameDirective {
 ```
 
 ### private-input [:top:](#current-status)
+
 Don't:
 ```ts
 export class NameComponent {
@@ -481,6 +495,7 @@ export class NameComponent {
 ```
 
 ### private-output [:top:](#current-status)
+
 Don't:
 ```ts
 export class NameComponent {
@@ -498,6 +513,7 @@ export class NameComponent {
 ```
 
 ### private-property [:top:](#current-status)
+
 Don't:
 ```ts
 export class AppComponent {
@@ -519,6 +535,7 @@ export class AppComponent {
 ```
 
 ### private-viewchild [:top:](#current-status)
+
 Don't:
 ```ts
 export class AppComponent implements AfterViewInit {
@@ -583,3 +600,11 @@ export class AppComponent {
 };
 ```
 The generic type parameter is not supported in Angular, and there is more [detail](https://github.com/angular/angular/issues/11057).
+
+### template-expression [:top:](#current-status)
+
+Assign expression like `greeting + answer` to `template` is supported by AoT.
+
+### template-variable [:top:](#current-status)
+
+Assign variable like `greeting` to `template` is supported by AoT.
