@@ -380,7 +380,7 @@ Desired effect of this case is that `Hello World 42` instead of `Hello 42` shoul
 
 Setting up basic `ng2-redux` is fine with AoT.
 
-### ng2-redux- [:top:](#current-status)@select
+### ng2-redux-@select [:top:](#current-status)
 The `@select` decorator works with raw `ngc` compiler but not with `@ngtools/webpack` because `@ngtools/webpack` explicitly remove all custom decorators. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
 
 In this test case, `@select() counter$: Observable<number>;` is used to get the counter observable so that we can access its value in the `AppComponent`.
