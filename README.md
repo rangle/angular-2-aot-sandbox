@@ -30,7 +30,7 @@ npm run start
 | [mut-property-decorator](#mut-property-decorator-top)                  |        ✅        |               ❌              |   ✅   |
 | [nomut-property-decorator](#nomut-property-decorator-top)              |        ✅        |               ❌              |   ✅   |
 | [ng2-redux](#ng2-redux-top)                                            |        ✅        |               ✅              |   ✅   |
-| [ng2-redux-@select](#ng2-redux-@select-top)                            |        ✅        |               ❌              |   ✅   |
+| [ng2-redux-@select](#ng2-redux-select-top)                             |        ✅        |               ❌              |   ✅   |
 | [ngrx](#ngrx-top)                                                      |        ✅        |               ✅              |   ✅   |
 | [ngrx-compose](#ngrx-compose-top)                                      |        ✅        |               ✅              |   ✅   |
 | [arrow-function-exports](#arrow-function-exports-top)                  |        ❌        |               ❌              |   ✅   |
@@ -40,8 +40,8 @@ npm run start
 | [func-declaration-export](#func-declaration-export-top)                |        ✅        |               ✅              |   ✅   |
 | [func-in-declarations](#func-in-declarations-top)                      |        ❌        |               ❌              |   ✅   |
 | [func-in-providers](#func-in-providers-top)                            |        ❌        |               ❌              |   ✅   |
-| [func-in-providers-useFactory](#func-in-providers-useFactory-top)      |        ❌        |               ❌              |   ✅   |
-| [func-in-providers-useValue](#func-in-providers-useValue-top)          |        ❌        |               ❌              |   ✅   |
+| [func-in-providers-useFactory](#func-in-providers-usefactory-top)      |        ❌        |               ❌              |   ✅   |
+| [func-in-providers-useValue](#func-in-providers-usevalue-top)          |        ❌        |               ❌              |   ✅   |
 | [func-in-routes](#func-in-routes-top)                                  |        ❌        |               ❌              |   ✅   |
 | [interpolated-es6](#interpolated-es6-top)                              |        ❌        |               ❌              |   ✅   |
 | [property-accessors](#property-accessors-top)                          |        ❌        |               ❌              |   ✅   |
