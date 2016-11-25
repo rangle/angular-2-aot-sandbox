@@ -1,5 +1,5 @@
 # Angular 2 AoT SandBox
-This repo is used to formalize what we can and cannot do with ngc.
+This repo is used to formalize what we can and cannot do with AoT (through `ngc` or `@ngtools/webpack`).
 
 To run specific test case like `control`:
 ```
