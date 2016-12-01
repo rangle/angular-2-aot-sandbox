@@ -20,7 +20,7 @@ npm run start
 ## Current Status
 
 |                                  Test                                  |  AoT With `ngc`  |  AoT With `@ngtools/webpack`  |  JiT  |
-| ---------------------------------------------------------------------- | :--------------: | :---------------------------: | :---: |   
+| ---------------------------------------------------------------------- | :--------------: | :---------------------------: | :---: |
 | [control](#control-top)                                                |        ✅        |               ✅              |   ✅   |
 | [form-control](#form-control-top)                                      |        ✅        |               ✅              |   ✅   |
 | [func-in-string-config](#func-in-string-config-top)                    |        ✅        |               ✅              |   ✅   |
@@ -32,6 +32,7 @@ npm run start
 | [ng2-redux](#ng2-redux-top)                                            |        ✅        |               ✅              |   ✅   |
 | [ng2-redux-@select](#ng2-redux-select-top)                             |        ✅        |               ❌              |   ✅   |
 | [ngrx](#ngrx-top)                                                      |        ✅        |               ✅              |   ✅   |
+| [ngrx-effects](#ngrx-effects-top)                                      |        ✅        |               ❌              |   ✅   |
 | [ngrx-compose](#ngrx-compose-top)                                      |        ✅        |               ✅              |   ✅   |
 | [arrow-function-exports](#arrow-function-exports-top)                  |        ❌        |               ❌              |   ✅   |
 | [default-exports](#default-exports-top)                                |        ❌        |               ❌              |   ✅   |
@@ -387,7 +388,11 @@ In this test case, `@select() counter$: Observable<number>;` is used to get the 
 
 ### ngrx [:top:](#current-status)
 
-Setting up basic `ng2-redux` is fine with AoT. But similar to `ng2-redux-@select`, `ngrx/Effects` does not work with `@ngtools/webpack`. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
+Setting up basic `ngrx` is fine with AoT.
+
+### ngrx-effects [:top:](#current-status)
+
+Setting up basic `ngrx-effects` is fine with AoT. But similar to `ng2-redux-@select`, `ngrx/Effects` does not work with `@ngtools/webpack`, due to custom decorators being stripped. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
 
 ### ngrx-compose [:top:](#current-status)
 
