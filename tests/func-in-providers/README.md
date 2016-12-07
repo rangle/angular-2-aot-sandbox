@@ -27,14 +27,9 @@ Do:
 ```ts
 //services/service-providers.ts
 import { AppService } from "./app.service";
-const services = {
-  AppService: AppService
-};
-
-export function getService(k) {
-  return services[k];
-}
-export const serviceProviders = Object.keys(services).map(getService);
+export const serviceProviders = [
+  AppService
+];
 
 //app.module.ts
 import { serviceProviders } from "./services/service-providers";
