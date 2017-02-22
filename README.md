@@ -29,10 +29,8 @@ npm run start
 | [template-expression](#template-expression-top)                        |        ✅        |               ✅              |   ✅   |
 | [mut-property-decorator](#mut-property-decorator-top)                  |        ✅        |               ❌              |   ✅   |
 | [nomut-property-decorator](#nomut-property-decorator-top)              |        ✅        |               ❌              |   ✅   |
-| [ng2-redux](#ng2-redux-top)                                            |        ✅        |               ✅              |   ✅   |
-| [ng2-redux-@select](#ng2-redux-select-top)                             |        ✅        |               ❌              |   ✅   |
+| [angular-redux-store](#angular-redux-store-top)                        |        ✅        |               ✅              |   ✅   |
 | [ngrx](#ngrx-top)                                                      |        ✅        |               ✅              |   ✅   |
-| [ngrx-effects](#ngrx-effects-top)                                      |        ✅        |               ❌              |   ✅   |
 | [ngrx-compose](#ngrx-compose-top)                                      |        ✅        |               ✅              |   ✅   |
 | [arrow-function-exports](#arrow-function-exports-top)                  |        ❌        |               ❌              |   ✅   |
 | [default-exports](#default-exports-top)                                |        ❌        |               ❌              |   ✅   |
@@ -372,22 +370,13 @@ Notice that `useValue` here does not work.
 Mutating property decorator is supported by `ngc`, but does not work with `@ngtools/webpack`, because `@ngtools/webpack` explicitly remove all custom decorators. Details can be found here: https://github.com/angular-redux/ng2-redux/issues/236.
 
 Desired effect of this case is that `Hello World 42` instead of `Hello 42` should be displayed.
-### ng2-redux [:top:](#current-status)
+### angular-redux [:top:](#current-status)
 
-Setting up basic `ng2-redux` is fine with AoT.
-
-### ng2-redux-@select [:top:](#current-status)
-The `@select` decorator works with raw `ngc` compiler but not with `@ngtools/webpack` because `@ngtools/webpack` explicitly remove all custom decorators. See [here](https://github.com/angular-redux/ng2-redux/issues/236) and [here](https://github.com/angular/angular-cli/issues/2799) for more information.
-
-In this test case, `@select() counter$: Observable<number>;` is used to get the counter observable so that we can access its value in the `AppComponent`.
+Setting up basic `angular-redux/store` is fine with AoT. This includes the `@select` decorator, both with `@ngtools/webpack` and raw `ngc`.
 
 ### ngrx [:top:](#current-status)
 
-Setting up basic `ngrx` is fine with AoT.
-
-### ngrx-effects [:top:](#current-status)
-
-Setting up basic `ngrx-effects` is fine with AoT. But similar to `ng2-redux-@select`, `ngrx/Effects` does not work with `@ngtools/webpack`, due to custom decorators being stripped. See [here](https://github.com/angular-redux/ng2-redux/issues/236) and [here](https://github.com/angular/angular-cli/issues/2799) for more information.
+Setting up basic `ngrx` is fine with AoT. This includes their `@Effect` decorator as well.
 
 ### ngrx-compose [:top:](#current-status)
 
