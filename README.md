@@ -268,7 +268,7 @@ export const fooConst = foo();
 
 //app.module.ts
 //...
-import { fooConst } from "./bar";
+import { fooConst } from "./foo";
 
 @NgModule({
   //...
