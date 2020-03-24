@@ -61,7 +61,7 @@ Arrow function does not work with AoT when it is passed to an `NgModule`.
 
 Don't:
 ```ts
-export const couterReducer = (state, action: Action) => {
+export const counterReducer = (state, action: Action) => {
   // ...
 }
 ```
