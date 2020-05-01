@@ -16,7 +16,9 @@
     "sandbox:ngc": "node_modules/.bin/ngc -p sandbox && cross-env NODE_ENV=production webpack --config webpack-aot-ngc.config.js",
     "sandbox:ngtools": "cross-env NODE_ENV=production webpack --config webpack-aot-ngtools.config.js",
     "sandbox:jit": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "start": "http-server ./dist"
+    "start": "http-server ./dist",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -51,7 +53,8 @@
     "rxjs": "5.0.0-beta.12",
     "zone.js": "0.6.21",
     "webpack": "2.1.0-beta.25",
-    "webpack-dev-server": "2.1.0-beta.5"
+    "webpack-dev-server": "2.1.0-beta.5",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@ngrx/core": "1.2.0",
@@ -65,5 +68,6 @@
     "ng2-redux": "4.1.0",
     "ngrx-store-logger": "0.1.7",
     "redux": "3.6.0"
-  }
+  },
+  "snyk": true
 }
